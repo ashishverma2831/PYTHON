@@ -207,3 +207,28 @@ first_name = 'Asabeneh'
 print(first_name)               # 'Asabeneh'
 first_name_to_list = list(first_name)
 print(first_name_to_list)            # ['A', 's', 'a', 'b', 'e', 'n', 'e', 'h']
+
+
+num_one, num_two = 5, 10
+total = num_one + num_two
+print(total)                    # 15
+
+
+"""
+The radius of a circle is 30 meters.
+Calculate the area of a circle and assign the value to a variable name of area_of_circle
+Calculate the circumference of a circle and assign the value to a variable name of circum_of_circle
+Take radius as user input and calculate the area.
+"""
+radius = 30
+PI = 3.14
+area_of_circle = PI * radius ** 2
+circum_of_circle = 2 * PI * radius
+print('Area of circle:', area_of_circle)
+print('Circumference of circle:', circum_of_circle)
+# Taking radius as user input
+radius = float(input('Enter radius of a circle: '))
+area_of_circle = PI * radius ** 2
+circum_of_circle = 2 * PI * radius
+print('Area of circle:', area_of_circle)
+print('Circumference of circle:', circum_of_circle)
