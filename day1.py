@@ -116,8 +116,12 @@ print(type(person))  # Output: <class 'dict'>
 import math
 point1 = (2, 3)
 point2 = (10, 8)
+
 distance = math.dist(point1, point2)
 print(distance) 
 
 distance = math.sqrt((10 - 2) ** 2 + (8 - 3) ** 2)
+print(distance)  # Output: 9.433981132056603
+
+distance = ((10 - 2) ** 2 + (8 - 3) ** 2) ** 0.5 # 0.5 = 1/2
 print(distance)  # Output: 9.433981132056603
