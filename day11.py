@@ -1,0 +1,206 @@
+# Day 11 of 30DaysOfPython Challenge
+# Functions in Python
+
+"""
+A function is a reusable block of code or programming statements designed to perform a certain task. To define or declare a function, Python provides the def keyword. The following is the syntax for defining a function. The function block of code is executed only if the function is called or invoked.
+"""
+
+"""
+# syntax
+# Declaring a function
+def function_name():
+    codes
+    codes
+# Calling a function
+function_name()
+"""
+
+def generate_full_name ():
+    first_name = 'Asabeneh'
+    last_name = 'Yetayeh'
+    space = ' '
+    full_name = first_name + space + last_name
+    print(full_name)
+generate_full_name () # calling a function
+
+def add_two_numbers ():
+    num_one = 2
+    num_two = 3
+    total = num_one + num_two
+    print(total)
+add_two_numbers() # calling a function
+
+
+def generate_full_name ():
+    first_name = 'Asabeneh'
+    last_name = 'Yetayeh'
+    space = ' '
+    full_name = first_name + space + last_name
+    return full_name
+print(generate_full_name())
+
+def add_two_numbers ():
+    num_one = 2
+    num_two = 3
+    total = num_one + num_two
+    return total
+print(add_two_numbers())
+
+
+"""
+  # syntax
+  # Declaring a function
+  def function_name(parameter):
+    codes
+    codes
+  # Calling function
+  print(function_name(argument))
+"""
+
+def greetings (name):
+    message = name + ', welcome to Python for Everyone!'
+    return message
+
+print(greetings('Asabeneh'))
+
+def add_ten(num):
+    ten = 10
+    return num + ten
+print(add_ten(90))
+
+def square_number(x):
+    return x * x
+print(square_number(2))
+
+def area_of_circle (r):
+    PI = 3.14
+    area = PI * r ** 2
+    return area
+print(area_of_circle(10))
+
+def sum_of_numbers(n):
+    total = 0
+    for i in range(n+1):
+        total+=i
+    print(total)
+print(sum_of_numbers(10)) # 55
+print(sum_of_numbers(100)) # 5050
+
+"""
+  # syntax
+  # Declaring a function
+  def function_name(para1, para2):
+    codes
+    codes
+  # Calling function
+  print(function_name(arg1, arg2))
+"""
+
+def generate_full_name (first_name, last_name):
+    space = ' '
+    full_name = first_name + space + last_name
+    return full_name
+print('Full Name: ', generate_full_name('Asabeneh','Yetayeh'))
+
+def sum_two_numbers (num_one, num_two):
+    sum = num_one + num_two
+    return sum
+print('Sum of two numbers: ', sum_two_numbers(1, 9))
+
+def calculate_age (current_year, birth_year):
+    age = current_year - birth_year
+    return age
+
+print('Age: ', calculate_age(2021, 1819))
+
+def weight_of_object (mass, gravity):
+    weight = str(mass * gravity)+ ' N' # the value has to be changed to a string first
+    return weight
+print('Weight of an object in Newtons: ', weight_of_object(100, 9.81))
+
+
+"""
+# syntax
+# Declaring a function
+def function_name(para1, para2):
+    codes
+    codes
+# Calling function
+print(function_name(para1 = 'John', para2 = 'Doe')) # the order of arguments does not matter here
+"""
+
+def print_fullname(firstname, lastname):
+    space = ' '
+    full_name = firstname  + space + lastname
+    print(full_name)
+print(print_fullname(firstname = 'Asabeneh', lastname = 'Yetayeh'))
+
+def add_two_numbers (num1, num2):
+    total = num1 + num2
+    print(total)
+print(add_two_numbers(num2 = 3, num1 = 2)) # Order does not matter
+
+
+"""
+If we do not return a value with a function, then our function is returning None by default. To return a value with a function we use the keyword return followed by the variable we are returning. We can return any kind of data types from a function.
+"""
+
+def print_name(firstname):
+    return firstname
+print_name('Asabeneh') # Asabeneh
+
+def print_full_name(firstname, lastname):
+    space = ' '
+    full_name = firstname  + space + lastname
+    return full_name
+print_full_name(firstname='Asabeneh', lastname='Yetayeh')
+
+def find_even_numbers(n):
+    evens = []
+    for i in range(n + 1):
+        if i % 2 == 0:
+            evens.append(i)
+    return evens
+print(find_even_numbers(10))
+
+"""
+# syntax
+# Declaring a function
+def function_name(param = value):
+    codes
+    codes
+# Calling function
+function_name()
+function_name(arg)
+"""
+
+"""
+# syntax
+# Declaring a function
+def function_name(*args):
+    codes
+    codes
+# Calling function
+function_name(param1, param2, param3,..)
+"""
+
+def sum_all_nums(*nums):
+    total = 0
+    for num in nums:
+        total += num     # same as total = total + num 
+    return total
+print(sum_all_nums(2, 3, 5)) # 10
+
+def generate_groups (team,*args):
+    print(team)
+    for i in args:
+        print(i)
+print(generate_groups('Team-1','Asabeneh','Brook','David','Eyob'))
+
+#You can pass functions around as parameters
+def square_number (n):
+    return n * n
+def do_something(f, x):
+    return f(x)
+print(do_something(square_number, 3)) # 27
+
